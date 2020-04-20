@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import Character from './Character'
 import axios from 'axios';
+import {Container, Row } from 'reactstrap';
 
 
 const CharacterList= (props)=>{
@@ -18,7 +19,8 @@ const CharacterList= (props)=>{
   },[])
 
     return(
-        <div>
+        <Container>
+            <Row>
            {ricky.map((value,index)=>{
                return(
                    <Character 
@@ -31,7 +33,8 @@ const CharacterList= (props)=>{
                    />
                )
            })}  
-        </div>
+           </Row>
+        </Container>
     )
 }
 export default CharacterList;
